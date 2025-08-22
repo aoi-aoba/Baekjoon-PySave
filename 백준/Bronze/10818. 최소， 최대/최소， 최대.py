@@ -1,3 +1,5 @@
+import sys
+
 T = int(input())
-arr = list(map(int, input().split()))
-print("%d %d" % (min(arr), max(arr)))
+arr = list(map(int, sys.stdin.readline().split()))
+print(min(arr), max(arr))
