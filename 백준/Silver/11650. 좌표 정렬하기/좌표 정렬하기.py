@@ -1,9 +1,11 @@
-import sys
-
 n = int(input())
 points = []
+
 for _ in range(n):
-    points.append(list(map(int, sys.stdin.readline().split())))
-points.sort(key=lambda point: (point[0], point[1]))
+    x, y = map(int, input().split())
+    points.append((x, y))
+
+points.sort()
+
 for x, y in points:
     print(x, y)
