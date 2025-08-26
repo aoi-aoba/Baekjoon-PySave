@@ -1,8 +1,11 @@
 n = int(input())
-res = 0
-for i in range(1, n+1):
-    sumCase = i + sum(int(j) for j in str(i))
+low = n - 9 * len(str(n))
+if low < 0 : low = 0
+
+for i in range(low, n):
+    sumCase = i + sum(map(int, str(i)))
     if sumCase == n:
-        res = i
+        print(i)
         break
-print(res)
+    if i == n - 1:
+        print(0)
