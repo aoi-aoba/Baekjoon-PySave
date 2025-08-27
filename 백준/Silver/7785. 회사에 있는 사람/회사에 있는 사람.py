@@ -1,11 +1,15 @@
 import sys
 input = sys.stdin.readline
 
+n = int(input())
 dataset = set()
-for line in sys.stdin.readlines()[1:]:
-    if line.split()[1] == "enter":
-        dataset.add(line.split()[0])
-    else: dataset.remove(line.split()[0])
 
-result = sorted(dataset, reverse=True)
-print("\n".join(result))
+for _ in range(n):
+    name, action = input().split()
+    if action == "enter":
+        dataset.add(name)
+    else:
+        dataset.discard(name)
+
+for name in sorted(dataset, reverse=True):
+    print(name)
