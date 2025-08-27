@@ -2,12 +2,19 @@ import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
-pokeDict = dict()
+pokeDict = {}
 
 for i in range(1, n + 1):
     name = input().strip()
-    pokeDict[str(i)] = name
+    pokeDict[i] = name
     pokeDict[name] = i
 
-for _ in range(1, m + 1):
-    print(pokeDict.get(input().strip()))
+ans = []
+for _ in range(m):
+    q = input().strip()
+    if q.isdigit():
+        ans.append(pokeDict[int(q)])
+    else:
+        ans.append(str(pokeDict[q]))
+        
+print("\n".join(ans))
