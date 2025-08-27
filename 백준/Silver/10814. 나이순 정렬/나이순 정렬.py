@@ -1,4 +1,4 @@
-n = int(input())
-members = [(int(age), name) for age, name in (input().split() for _ in range(n))]
-members.sort(key=lambda x: x[0])
-print("\n".join(f"{age} {name}" for age, name in members))
+import sys
+data = sys.stdin.readlines()[1:]
+data.sort(key=lambda dataline: int(dataline.split()[0]))
+print("".join(data))
