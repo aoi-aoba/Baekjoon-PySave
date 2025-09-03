@@ -12,4 +12,4 @@ for _ in range(n):
         else:
             wordDict[word] = 1
 
-print("\n".join(sorted(set(wordDict), key=lambda w : (-wordDict[w], -len(w), w))))
+print("\n".join(sorted(wordDict, key=lambda w : (-wordDict[w], -len(w), w))))
