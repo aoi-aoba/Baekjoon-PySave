@@ -1,10 +1,8 @@
-def fibo(n):
-    a = b = 1
-    if n <= 1:
-        return n
-    for i in range(1, n):
-        a, b = b, b + a
-    return a
-
 import sys
-print(fibo(int(sys.stdin.readline())))
+
+num1 = 0
+num2 = 1
+n = int(sys.stdin.readline())
+for i in range(n + 1):
+    num1, num2 = num1 + num2, num1
+print(num2)
