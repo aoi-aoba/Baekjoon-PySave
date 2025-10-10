@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 dp_array = [[[1 for _ in range(21)] for _ in range(21)] for _ in range(21)]
 
 def dp():
